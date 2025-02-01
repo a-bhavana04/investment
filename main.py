@@ -9,7 +9,7 @@ from StockTradingEnv import StockTradingEnv
 app = Flask(__name__)
 
 # Load model and authenticate Google Sheets
-model = PPO.load("stock_trading_ppo_model")
+model = PPO.load("stock_trading_model")
 client = pygsheets.authorize(service_file='stock-449613-7413d6080b00.json')
 sheet = client.open_by_url('https://docs.google.com/spreadsheets/d/12SzviXwEFOnGIc2j7E-oyQfiwO-PeNlBXW7L3V42dGE/edit')
 
